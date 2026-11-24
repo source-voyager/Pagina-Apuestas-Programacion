@@ -1,0 +1,189 @@
+/* ============================================
+   ruleta.css
+   Estilos solo para la página de la ruleta.
+   ============================================ */
+
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- Fichas para apostar ---------- */
+.fichas {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ficha-boton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #16241c;
+  border: 2px solid #2a3b34;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: var(--texto);
+  font-family: inherit;
+  font-size: 14px;
+  text-align: left;
+}
+
+.ficha-boton small {
+  display: block;
+  color: var(--texto-gris);
+  font-size: 11px;
+}
+
+.ficha-boton:hover {
+  border-color: var(--dorado);
+}
+
+/* la ficha que el jugador eligió se queda resaltada */
+.ficha-boton.elegida {
+  border-color: var(--dorado);
+  background-color: #22382d;
+}
+
+.ficha {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px dashed white;
+  flex-shrink: 0;
+}
+
+.ficha.roja { background-color: var(--rojo); }
+.ficha.negra { background-color: #111; }
+.ficha.verde { background-color: #0e6b46; }
+
+/* ---------- La ruleta ---------- */
+.rueda-caja {
+  text-align: center;
+}
+
+.rueda {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 8px solid var(--dorado);
+  margin: 0 auto 20px;
+  position: relative;
+  transition: transform 4s ease-out; /* esto hace que la rueda gire despacito hasta frenar */
+  background: conic-gradient(
+    #7c1f2b 0deg 30deg,
+    #111 30deg 60deg,
+    #7c1f2b 60deg 90deg,
+    #111 90deg 120deg,
+    #7c1f2b 120deg 150deg,
+    #111 150deg 180deg,
+    #7c1f2b 180deg 210deg,
+    #111 210deg 240deg,
+    #7c1f2b 240deg 270deg,
+    #111 270deg 300deg,
+    #7c1f2b 300deg 330deg,
+    #111 330deg 360deg
+  );
+}
+
+/* el círculo verde del centro, para que los números queden en un aro */
+.rueda .centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -60px 0 0 -60px;
+  border-radius: 50%;
+  background-color: var(--verde-oscuro);
+  border: 4px solid var(--dorado);
+}
+
+/* el cero verde, arriba de la rueda */
+.rueda .cero {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #0e6b46;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Los números: cada uno se pone arriba de la rueda y después se gira
+   alrededor del centro. El centro de la rueda está a 122px del
+   borde de arriba del número, por eso transform-origin es "14px 122px". */
+.rueda .num {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 28px;
+  height: 24px;
+  margin-left: -14px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  transform-origin: 14px 122px;
+}
+
+/* Cada casilla mide 30 grados, así que el número va a 15 grados (el medio de la casilla),
+   y los siguientes de 30 en 30 */
+.n1  { transform: rotate(15deg); }
+.n2  { transform: rotate(45deg); }
+.n3  { transform: rotate(75deg); }
+.n4  { transform: rotate(105deg); }
+.n5  { transform: rotate(135deg); }
+.n6  { transform: rotate(165deg); }
+.n7  { transform: rotate(195deg); }
+.n8  { transform: rotate(225deg); }
+.n9  { transform: rotate(255deg); }
+.n10 { transform: rotate(285deg); }
+.n11 { transform: rotate(315deg); }
+.n12 { transform: rotate(345deg); }
+
+/* el triangulito dorado que apunta hacia la rueda */
+.puntero {
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 16px solid var(--dorado-claro);
+  margin: 0 auto -6px;
+  position: relative;
+  z-index: 2;
+}
+
+.boton-girar {
+  background-color: var(--dorado);
+  color: #2a1a05;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.boton-girar:hover {
+  background-color: var(--dorado-claro);
+}
+
+.boton-girar small {
+  display: block;
+  font-weight: normal;
+  font-size: 11px;
+}

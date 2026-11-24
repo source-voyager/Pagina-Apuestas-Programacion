@@ -1,0 +1,97 @@
+/* ============================================
+   slot.css
+   Estilos solo para la página de la tragamonedas.
+   ============================================ */
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* ---------- La máquina ---------- */
+.maquina {
+  background-color: #3a2b12;
+  border: 3px solid var(--dorado);
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rodillos {
+  display: flex;
+  gap: 8px;
+  background-color: black;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.rodillo {
+  width: 65px;
+  height: 85px;
+  background-color: #f0e8d4;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  color: #8a1c26;
+  font-weight: bold;
+}
+
+/* la palanca del costado de la máquina (también se puede tocar para jugar) */
+.palanca {
+  width: 8px;
+  height: 90px;
+  background-color: var(--dorado);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.palanca .bolita {
+  width: 22px;
+  height: 22px;
+  background-color: var(--rojo);
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  left: -7px;
+  transition: top 0.2s; /* para que baje suave cuando la jalamos */
+}
+
+/* cuando la palanca tiene la clase "abajo", la bolita baja */
+.palanca.abajo .bolita {
+  top: 70px;
+}
+
+.boton-tirar {
+  background-color: var(--dorado);
+  color: #2a1a05;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.boton-tirar:hover {
+  background-color: var(--dorado-claro);
+}
+
+.boton-tirar small {
+  display: block;
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.info-extra {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: var(--texto-gris);
+}

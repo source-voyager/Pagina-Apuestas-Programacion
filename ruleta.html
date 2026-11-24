@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruleta - Esmeralda Club</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="ruleta.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Cabecera de arriba: saldo, nombre del juego y marca -->
+    <div class="topbar">
+      <div class="saldo">💎 <span class="numero">0</span></div>
+      <div class="titulo-juego">Ruleta</div>
+      <div class="marca">Esmeralda Club</div>
+    </div>
+
+    <!-- Contenido de la página -->
+    <div class="contenido">
+
+      <!-- Botones para elegir en qué apostar -->
+      <div class="fichas">
+        <button class="ficha-boton" data-eleccion="rojo">
+          <span class="ficha roja"></span>
+          <span>Rojo<small>Paga 1 a 1</small></span>
+        </button>
+        <button class="ficha-boton" data-eleccion="negro">
+          <span class="ficha negra"></span>
+          <span>Negro<small>Paga 1 a 1</small></span>
+        </button>
+        <button class="ficha-boton" data-eleccion="cero">
+          <span class="ficha verde"></span>
+          <span>Cero<small>Paga 10 a 1</small></span>
+        </button>
+      </div>
+
+      <!-- La ruleta -->
+      <div class="rueda-caja">
+        <div class="puntero"></div>
+        <div class="rueda" id="rueda">
+          <div class="centro"></div>
+          <span class="cero">0</span>
+          <span class="num n1">32</span>
+          <span class="num n2">15</span>
+          <span class="num n3">19</span>
+          <span class="num n4">4</span>
+          <span class="num n5">21</span>
+          <span class="num n6">2</span>
+          <span class="num n7">25</span>
+          <span class="num n8">17</span>
+          <span class="num n9">34</span>
+          <span class="num n10">6</span>
+          <span class="num n11">27</span>
+          <span class="num n12">13</span>
+        </div>
+        <button class="boton-girar" id="btn-girar">
+          Girar
+          <small>Apuesta: 500</small>
+        </button>
+        <p class="mensaje" id="mensaje">Elige Rojo, Negro o Cero y gira la ruleta.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="menu">
+    <a href="ruleta.html" class="activo"><span class="icono">🎡</span>Ruleta</a>
+    <a href="holdem.html"><span class="icono">🃏</span>Hold'em</a>
+    <a href="blackjack.html"><span class="icono">🂡</span>Blackjack</a>
+    <a href="slot.html"><span class="icono">🎰</span>Slot</a>
+    <a href="opciones.html"><span class="icono">⚙️</span>Opciones</a>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="ruleta.js"></script>
+</body>
+</html>

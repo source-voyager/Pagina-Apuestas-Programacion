@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackjack - Esmeralda Club</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="blackjack.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <div class="topbar">
+      <div class="saldo">💎 <span class="numero">0</span></div>
+      <div class="titulo-juego">Blackjack</div>
+      <div class="marca">Esmeralda Club</div>
+    </div>
+
+    <div class="contenido">
+
+      <!-- Cartas del crupier -->
+      <div class="mesa">
+        <div class="mesa-info">
+          <span id="apuesta">Apuesta: 500</span>
+          <span>Blackjack paga 3 a 2</span>
+        </div>
+        <div class="cartas-mesa" id="cartas-crupier"></div>
+      </div>
+      <p class="mensaje">Crupier: <b id="valor-crupier">-</b></p>
+
+      <!-- Cartas del jugador -->
+      <div class="mi-mano">
+        <div class="cartas-mesa" id="cartas-jugador"></div>
+        <p>Tu mano: <b id="valor-jugador">-</b></p>
+      </div>
+
+      <p class="mensaje" id="mensaje"></p>
+
+      <!-- Botones para jugar -->
+      <div class="acciones">
+        <button id="btn-hit">Hit</button>
+        <button id="btn-stay" class="principal">Stay</button>
+        <button id="btn-double">Double</button>
+        <button id="btn-nueva">Nueva mano</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="menu">
+    <a href="ruleta.html"><span class="icono">🎡</span>Ruleta</a>
+    <a href="holdem.html"><span class="icono">🃏</span>Hold'em</a>
+    <a href="blackjack.html" class="activo"><span class="icono">🂡</span>Blackjack</a>
+    <a href="slot.html"><span class="icono">🎰</span>Slot</a>
+    <a href="opciones.html"><span class="icono">⚙️</span>Opciones</a>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="cartas.js"></script>
+  <script src="blackjack.js"></script>
+</body>
+</html>

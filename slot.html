@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slot - Esmeralda Club</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="slot.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <div class="topbar">
+      <div class="saldo">💎 <span class="numero">0</span></div>
+      <div class="titulo-juego">Tragamonedas</div>
+      <div class="marca">Esmeralda Club</div>
+    </div>
+
+    <div class="contenido">
+
+      <!-- La máquina con sus 3 rodillos y la palanca -->
+      <div class="maquina">
+        <div class="rodillos">
+          <div class="rodillo">🍒</div>
+          <div class="rodillo">7</div>
+          <div class="rodillo">🔔</div>
+        </div>
+        <div class="palanca">
+          <div class="bolita"></div>
+        </div>
+      </div>
+
+      <button class="boton-tirar" id="btn-tirar">
+        Tirar
+        <small>Apuesta: 250</small>
+      </button>
+
+      <p class="mensaje" id="mensaje">Toca el botón o la palanca para jugar.</p>
+
+      <div class="info-extra">
+        <span>3 iguales: hasta 25x</span>
+        <span>2 iguales: recuperas tu apuesta</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="menu">
+    <a href="ruleta.html"><span class="icono">🎡</span>Ruleta</a>
+    <a href="holdem.html"><span class="icono">🃏</span>Hold'em</a>
+    <a href="blackjack.html"><span class="icono">🂡</span>Blackjack</a>
+    <a href="slot.html" class="activo"><span class="icono">🎰</span>Slot</a>
+    <a href="opciones.html"><span class="icono">⚙️</span>Opciones</a>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="slot.js"></script>
+</body>
+</html>

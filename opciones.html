@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opciones - Esmeralda Club</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="opciones.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <div class="topbar">
+      <div class="saldo">💎 <span class="numero">0</span></div>
+      <div class="titulo-juego">Opciones</div>
+      <div class="marca">Esmeralda Club</div>
+    </div>
+
+    <div class="contenido">
+      <div class="panel">
+
+        <div class="opcion">
+          <div class="texto">
+            <strong>Volumen general</strong>
+            <span>Efectos, música y ambiente</span>
+          </div>
+          <div class="derecha">
+            <input type="range" id="volumen" min="0" max="100" value="65">
+            <span id="texto-volumen">65%</span>
+          </div>
+        </div>
+
+        <div class="opcion">
+          <div class="texto">
+            <strong>Música de mesa</strong>
+            <span>Ambiente de fondo del casino</span>
+          </div>
+          <input type="checkbox" id="musica">
+        </div>
+
+        <div class="opcion">
+          <div class="texto">
+            <strong>Efectos de sonido</strong>
+            <span>Fichas, cartas y giros</span>
+          </div>
+          <input type="checkbox" id="efectos" checked>
+        </div>
+
+        <div class="opcion">
+          <div class="texto">
+            <strong>Modo silencioso</strong>
+            <span>Silenciar todo el audio</span>
+          </div>
+          <input type="checkbox" id="silencio">
+        </div>
+
+        <div class="opcion">
+          <div class="texto">
+            <strong>Reiniciar saldo</strong>
+            <span>Vuelve a empezar con 25,000 💎</span>
+          </div>
+          <button id="btn-reiniciar">Reiniciar</button>
+        </div>
+
+      </div>
+
+      <p class="mensaje" id="mensaje"></p>
+    </div>
+  </div>
+
+  <div class="menu">
+    <a href="ruleta.html"><span class="icono">🎡</span>Ruleta</a>
+    <a href="holdem.html"><span class="icono">🃏</span>Hold'em</a>
+    <a href="blackjack.html"><span class="icono">🂡</span>Blackjack</a>
+    <a href="slot.html"><span class="icono">🎰</span>Slot</a>
+    <a href="opciones.html" class="activo"><span class="icono">⚙️</span>Opciones</a>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="opciones.js"></script>
+</body>
+</html>

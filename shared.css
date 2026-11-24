@@ -1,0 +1,134 @@
+/* ============================================
+   shared.css
+   Estilos que se repiten en todas las páginas:
+   colores, fondo, cabecera y menú de abajo.
+   ============================================ */
+
+/* Colores que usamos en toda la página, para no repetir códigos de color */
+:root {
+  --verde-oscuro: #123f30;
+  --fondo: #0e1b16;
+  --dorado: #c9a24a;
+  --dorado-claro: #e9d194;
+  --rojo: #7c1f2b;
+  --texto: #f1e7d2;
+  --texto-gris: #cfc3aa;
+}
+
+/* Reset básico para que todos los navegadores se vean igual */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal de la página */
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 100px; /* espacio para que el menú de abajo no tape el contenido */
+}
+
+/* ---------- Cabecera de arriba ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #2a3b34;
+  margin-bottom: 30px;
+}
+
+.saldo {
+  background-color: #16241c;
+  border: 1px solid var(--dorado);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.saldo .numero {
+  font-weight: bold;
+  color: var(--dorado-claro);
+}
+
+.titulo-juego {
+  background-color: #16241c;
+  border: 1px solid #2a3b34;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.marca {
+  font-weight: bold;
+  color: var(--dorado-claro);
+  font-size: 16px;
+}
+
+/* ---------- Mensajes de resultado (ganaste, perdiste, etc.) ---------- */
+.mensaje {
+  text-align: center;
+  min-height: 22px;
+  margin: 0;
+  color: var(--dorado-claro);
+  font-size: 14px;
+}
+
+/* Los botones desactivados se ven más apagados */
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- Menú de abajo ---------- */
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: #16241c;
+  border-top: 2px solid var(--dorado);
+}
+
+.menu a {
+  flex: 1;
+  text-align: center;
+  padding: 14px 5px;
+  color: var(--texto-gris);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.menu a .icono {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.menu a:hover {
+  color: var(--texto);
+}
+
+/* el botón de la página en la que estamos se ve resaltado en dorado */
+.menu a.activo {
+  color: var(--dorado-claro);
+  border-top: 2px solid var(--dorado);
+  margin-top: -2px;
+}
+
+/* En pantallas chicas (celular) bajamos un poco el tamaño de letra */
+@media (max-width: 600px) {
+  .titulo-juego {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+}
